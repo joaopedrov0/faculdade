@@ -18,6 +18,9 @@ maxDay = [31, # Janeiro 0
         31 # Dezembro 11
         ]
 
+        # Padrão: se é menor que 7, os dias ímpares tem 30 e pares tem 31, isso se inverte do 7 pra cima
+        # Exceção: fevereiro
+
 print("Seja bem vindo ao programa comparador de datas")
 
 # Coleta de dados
