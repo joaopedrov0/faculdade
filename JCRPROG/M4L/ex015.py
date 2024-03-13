@@ -1,0 +1,2 @@
+# 15. Elabore um programa que calcule e mostre a soma dos 10 primeiros termos da série:
+# Fração x/y, onde x é um número que começa em 100 e decresce, e y é o fatorial de um número crescente iniciado em 0.
