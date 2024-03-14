@@ -6,20 +6,22 @@
 # Declare com constantes simbólicas o lucro mínimo, a retirada mínima e o limite da 
 # retirada. 
 
-minLucro = 1000
-minRetirada = 1000
-maxRetirada = 0.4 # Valor máximo deve respeitar 40% do lucro
-
 faturamento = float(input("Digite o faturamento mensal: "))
 despesas = float(input("Digite as despesas do mês: "))
 
 lucro = faturamento - despesas
 
+minLucro = 1000
+minRetirada = 1000
+maxRetirada = lucro * 0.4 # Valor máximo deve respeitar 40% do lucro
+
 retirada = 0
 
 if(lucro > 3000):
     retirada = lucro * maxRetirada
-else:
+elif(lucro == minLucro):
     retirada = minRetirada
+else:
+    retirada = 0
 
-print("Seu lucro foi de {}, portanto, você deve retirar {} para gastos pessoais.".format(lucro, retirada))
+print("Seu lucro foi de R${:.2f}, portanto, você deve retirar R${:.2f} para gastos pessoais.".format(lucro, retirada))
