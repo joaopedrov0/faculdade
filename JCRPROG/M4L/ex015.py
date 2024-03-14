@@ -10,5 +10,9 @@ for i in range(0, 100, 1):
         break
     if (i == 0):
         print("{}° termo: {}".format((i + 1), (100 - i)/fatorialTemp))
-    print("{}° termo: {}".format((i + 1), (100 - i)/(fatorialTemp * i)))
-    print("Fatorial de {} é {}".format(i, fatorialTemp*i))
+        continue
+    fatorialTemp *= i
+    print("{}° termo: {}".format((i + 1), (100 - i)/(fatorialTemp)))
+    # print("Fatorial de {} é {}".format(i, fatorialTemp))
+    
+    many -= 1
