@@ -61,7 +61,7 @@ while stop != True | answers < 50:
 | Deseja fazer mais um cadastro?
 | 
 | Digite [0] para fazer mais um cadastro.
-| Digite [1] para encerrar o programa e exibir os dados finais.
+| Digite [1] ou qualquer outro número diferente de 0 para encerrar o programa e exibir os dados finais.
 | 
 | Digite o código do que deseja fazer: """))
     if stopOrder == 0:
