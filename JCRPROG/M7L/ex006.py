@@ -3,6 +3,9 @@
 # usuário e, a partir desse dicionário e de um valor indicado pelo usuário, encontrar e 
 # exibir as chaves relacionadas ao valor em forma de lista. 
 
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
 champions = {
     "Aatrox": "Lutador",
     "Ahri": "Mago",
@@ -173,12 +176,7 @@ while True:
         print("Essa função não existe, verifique a ortografia.")
 
 finalArray = []
-
 for champion in champions:
-    if champions[champion] == function:
+    if champions[champion].lower() == function:
         finalArray.append(champion)
         print(champion)
-
-print(finalArray)
-print("Atenção esse código ta com erros")
-# verificar se função existe, colocar todos da função numa lista, exibir todos
