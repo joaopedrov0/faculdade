@@ -22,8 +22,9 @@ def combinacoes(m, n):
 m = int(input("Digite a quantidade de elementos do conjunto que você deseja analisar (conjunto inteiro): "))
 
 while True:
-    n = int(input("Digite o tamanho das combinações que você deseja analisar (deve ser maior do que o conjunto inteiro):    "))
+    n = int(input("Digite o tamanho das combinações que você deseja analisar (deve ser maior do que o conjunto inteiro): "))
     if (n > m):
+        print("Valor inválido, digite outro número.")
         continue
     break
 
