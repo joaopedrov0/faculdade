@@ -23,5 +23,8 @@ m = int(input("Digite a quantidade de elementos do conjunto que você deseja ana
 
 while True:
     n = int(input("Digite o tamanho das combinações que você deseja analisar (deve ser maior do que o conjunto inteiro):    "))
+    if (n > m):
+        continue
+    break
 
 print("O número de combinações possíveis de {} elementos em grupos de {} elementos é: {}".format(m, n, combinacoes(m, n)))
