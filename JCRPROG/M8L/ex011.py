@@ -29,19 +29,20 @@ def seno_mc_laurin(angulo_graus, precisao):
     termo = angulo_rad
     n = 0
     
-    while abs(termo) > precisao:
+    while precisao > 0:
         termo = ((-1) ** n) * (angulo_rad ** (2 * n + 1)) / fatorial(2 * n + 1)
         seno += termo
         n += 1
+        precisao -= 1
     
     return seno
 
 def main():
     angulo_graus = float(input("Digite o ângulo em graus: "))
-    precisao = float(input("Digite a precisão requerida: "))
+    precisao = int(input("Digite a precisão requerida (quantidade de sequências): "))
     
     seno_calculado = seno_mc_laurin(angulo_graus, precisao)
     
-    print("Seno calculado para {} graus com precisão {}: {}".format(angulo_graus, precisao, seno_calculado))
+    print("Seno calculado para {} graus com precisão de {} sequências: {}".format(angulo_graus, precisao, seno_calculado))
 
 main()
