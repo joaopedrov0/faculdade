@@ -11,7 +11,7 @@ def produtorio(m, n, res=1):
         return produtorio(m, n - 1, res)
     return res
 
-print(produtorio(3, 3))
+# print(produtorio(3, 3))
 
 # b
 def pow(k, n, res=1):
@@ -24,12 +24,20 @@ def pow(k, n, res=1):
 
 # c
 def absoluteSum(n):
+    return sumList(list(str(n)))
 
-    return
+def sumList(numList, i=-2, res=0):
+    if i == -2:
+        i = len(numList)-1
+    if i < 0:
+        return res
+    res = res + int(numList[i])
+    return sumList(numList, i-1, res)
 
-def runList(list):
-    return
+# print(absoluteSum(324232))
 
 # d
-def digitMedia():
-    return
+def digitMedia(n):
+    return absoluteSum(n)/len(list(str(n)))
+
+print(digitMedia(345))
