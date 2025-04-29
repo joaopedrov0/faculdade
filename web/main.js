@@ -58,13 +58,15 @@ function rowDice(dice){
     let quantity = dice[0]
     let surfaces = dice[1]
     for(let i = 0; i < quantity; i++){
-        value = Math.floor(Math.random()*6) + 1
+        value = Math.floor(Math.random()*diceType) + 1
         acumulator += value
     }
     return acumulator
 }
 
 const data = []
+
+const diceType = "7d4"
 
 function feedData(data, qtdData=200){
     for(let i=0; i < qtdData; i++){
