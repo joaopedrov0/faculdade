@@ -58,7 +58,7 @@ function rowDice(dice){
     let quantity = dice[0]
     let surfaces = dice[1]
     for(let i = 0; i < quantity; i++){
-        value = Math.floor(Math.random()*diceType) + 1
+        value = Math.floor(Math.random()*surfaces) + 1
         acumulator += value
     }
     return acumulator
@@ -66,15 +66,15 @@ function rowDice(dice){
 
 const data = []
 
-const diceType = "7d4"
+const diceType = "20d4"
 
 function feedData(data, qtdData=200){
     for(let i=0; i < qtdData; i++){
-        data.push(rowDice('12d10'))
+        data.push(rowDice(diceType))
     }
 }
 
-feedData(data, 700)
+feedData(data, 1000)
 
 let a = opcoes["1"](listaPonderada)
 let b = opcoes["2"](data)
@@ -91,11 +91,16 @@ console.log(data)
 
 
 function generateFreqGraph(data){
-    data.sort()
+    data.sort((a, b) => {
+        if (a < b){
+            return -1
+        } else {
+            return 1
+        }
+    })
     let min = data[0]
     let max = data[data.length - 1]
-    
-    for(let i = min; i < max; i++){
+    for(let i = min; i <= max; i++){
         let freq = many(i, data)
         let tempStr = ''
         for(let j = 0; j < freq; j++){
